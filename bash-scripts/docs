@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Author : Chirag Jain
+# Copyright (c) Amaeka
+
+# Doc Sheets
+
+1) Permissions ::
+=================
+    https://www.linode.com/docs/tools-reference/linux-users-and-groups
+    +t - sticky bit
+    +s - setuid bit
+
+I) Sticky Bit: Only owner (or root) can delete file, regardless of which user  have write access to this file/directory by way of group membership or ownership.
+    chmod +t or -t /etc/sticky.txt
+
+II) Setuid:
+  a) On files :: Allows users with permissions to execute a given file the ability to run that file with the permissions of file owner. If the file work was owned by the root user and the marketing group, members of the marketing group could run the work program as if they were the root user.
+
+  b) On Directories : Different - Files created in +s directories receive the   ownership of that directory’s user and group
+
+
+
+======================
+2) Fail2ban :: IP ban on 3 failed login
+    https://www.linode.com/docs/security/using-fail2ban-for-security
